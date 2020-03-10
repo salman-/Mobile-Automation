@@ -63,7 +63,7 @@ public class *Steps extends Driver{
 		this.driver = driver;
 	}
 
-	public RegisterInsuranceSteps() {}
+	public *Steps() {}
 
 ```
 
