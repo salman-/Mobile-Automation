@@ -9,6 +9,7 @@ This project automate the [Cara Android Application](https://play.google.com/sto
 2. Install `Cucumber Eclipse plugin` on your `Eclipse` or the alternative for `Intellij`
 3. Install [Cara Android Application](https://play.google.com/store/apps/details?id=com.gohidoc.cara)
 4. Run Appium server using `Appium Desktop` or by `Appium` command
+5. Run `adb devices` over the command line and get the `uuid`, then write the `uuid`  
 
 #### How to Run
 There are two different ways to run the test:
@@ -83,10 +84,10 @@ public class Hooks extends Driver {
     public void testInitializer() throws MalformedURLException {
 
         DesiredCapabilities cap = new DesiredCapabilities();
-        cap.setCapability("deviceName", "SM-G950F");
-        cap.setCapability("udid","ce031713c0cce4750d");
+        cap.setCapability("deviceName", "Your-Device-Name");
+        cap.setCapability("udid","UUID of Your Device");
         cap.setCapability("platformName","Android");
-        cap.setCapability("platformVersion","9");
+        cap.setCapability("platformVersion","Your Android Version");
 
         cap.setCapability("appPackage","com.gohidoc.cara");
         cap.setCapability("appActivity","com.gohidoc.cara.MainActivity");
