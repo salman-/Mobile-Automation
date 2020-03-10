@@ -13,7 +13,7 @@ This project automate the [Cara Android Application](https://play.google.com/sto
 #### How to Run
 There are two different ways to run the test:
 
-1. From `src/test/resources` open the `RegisterInsurance.feature`. Right click on it, `Run as > Cucumber feature` 
+1. From `src/test/resources` open the `*.feature`. Right click on it, `Run as > Cucumber feature` 
 This approach does not generate any report
 
 2. From `src/test/java/runner` open the `TestRunnerJUnit` class. Right click on it, `Run as > JUnit test` 
@@ -52,12 +52,12 @@ And then implementation of dependency injection in cucumber and selenium is as b
 The `step` class:  
 
 ```{java}
-public class RegisterInsuranceSteps extends Driver{
+public class *Steps extends Driver{
 
 	Driver driver;
 
 
-	public RegisterInsuranceSteps(Driver driver) {
+	public *Steps(Driver driver) {
 
 		this.driver = driver;
 	}
@@ -112,7 +112,8 @@ And finally the `Driver` class:
 ```{java}
 public class Driver  {
 
-	WebDriver driver;
+	//WebDriver driver;
+	 AppiumDriver<MobileElement> driver;
 }
 ```
 Here is the class diagram of the  `Driver`, `Step` and `Hooks`
